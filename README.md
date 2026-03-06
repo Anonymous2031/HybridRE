@@ -81,7 +81,7 @@ HybridRE/
 Clone the repository:
 
 ```
-git clone https://github.com/yourusername/HybridRE.git
+git clone https://github.com/Anonymous2031/HybridRE.git
 cd HybridRE
 ```
 
@@ -109,28 +109,3 @@ python hybrid_inference.py
 
 ---
 
-## Citation
-
-If you use HybridRE in your research, please cite:
-
-```
-@article{hybridre2026,
-  title={HybridRE: Confidence-Guided Hybrid Relation Extraction},
-  author={Ourekouch, Yassine},
-  year={2026}
-}
-```
-
----
-
-## License
-
-This project is released under the **MIT License**.
-
----
-
-## Contact
-
-**Yassine Ourekouch**  
-PhD Researcher — AI / NLP  
-UM6P College of Computing
