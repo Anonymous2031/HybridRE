@@ -7,7 +7,7 @@ The key idea is to leverage the **confidence scores produced by PLMs** to detect
 
 ---
 
-## Overview
+# Overview
 
 Relation Extraction (RE) systems based on PLMs achieve strong performance but often produce **low-confidence predictions that correspond to most errors**. In contrast, LLMs demonstrate stronger semantic reasoning but remain **computationally expensive** for large-scale inference.
 
@@ -18,94 +18,110 @@ HybridRE introduces a **selective hybrid inference mechanism**:
 3. Predictions **above a threshold** are accepted directly.
 4. Predictions **below the threshold** are **reclassified using a LoRA-adapted LLM**.
 
-This approach improves performance while controlling inference cost.
+---
+
+# Example HybridRE Pipeline
+
+The repository provides an **end‑to‑end example** starting from a TACRED-style JSON example and producing final hybrid predictions.
+
+Input example:
+
+```
+Data/0_RAW/EXAMPLE.json
+```
 
 ---
 
-## Framework
+# Step 1 — PLM Prediction
 
-HybridRE consists of two main components:
+Run the PLM model to generate predictions and confidence scores.
 
-### Stage 1 — PLM Prediction
+```bash
+python get_PLM_Predictions.py   --model_name_or_path roberta-large   --check_model ./PLM_Models/RoBERTa-Large_ReTACRED/RoBERTa-LARGE_ReTACRED.bin   --test_path ./Data/0_RAW/EXAMPLE.json   --predictions_path ./Data/1_Processed/EXAMPLE.csv   --dataset_type RETACRED
+```
 
-- Transformer-based PLM performs relation classification
-- Generates prediction confidence scores
+Output file:
 
-### Stage 2 — Selective LLM Reclassification
-
-- Low-confidence predictions are routed to a **LoRA-adapted LLM**
-- The LLM performs **prompt-based relation inference**
-
-Final predictions combine both outputs.
+```
+Data/1_Processed/EXAMPLE.csv
+```
 
 ---
 
-## Key Features
+# Step 2 — Convert Predictions to Prompts
 
-- Confidence-guided hybrid inference
-- Efficient combination of **PLMs and LLMs**
-- LoRA-based lightweight LLM adaptation
-- Improved handling of **uncertain relation predictions**
-- Scalable architecture for large RE datasets
+Transform PLM predictions into prompts for LLM inference.
 
----
+```bash
+python process_example2prompts.py   --csv_path Data/1_Processed/EXAMPLE.csv   --dataset_name ReTACRED   --output_json Data/2_Prompts/EXAMPLE_prompts.json
+```
 
-## Supported Datasets
+Output:
 
-HybridRE is evaluated on widely used relation extraction benchmarks:
-
-- **TACRED**
-- **TACREV**
-- **Re-TACRED**
+```
+Data/2_Prompts/EXAMPLE_prompts.json
+```
 
 ---
 
-## Repository Structure
+# Step 3 — Hybrid LLM Inference
+
+Run HybridRE routing with confidence threshold.
+
+```bash
+python inference_on_LLMs_HybridRE.py   --prompts_json Data/2_Prompts/EXAMPLE_prompts.json   --processed_csv Data/1_Processed/EXAMPLE.csv   --output_csv Data/3_Final_predictions/EXAMPLE_final_predictions.csv   --model_path LLM_Models/QWEN_RETACRED/checkpoint-1600-merged   --threshold 0.99
+```
+
+Output file:
+
+```
+Data/3_Final_predictions/EXAMPLE_final_predictions.csv
+```
+
+---
+
+# Hybrid Decision Rule
+
+```
+if Confidence >= threshold:
+    Final_Prediction = Initial_Predictions
+else:
+    Final_Prediction = LLM_Prediction
+```
+
+---
+
+# Repository Structure
 
 ```
 HybridRE/
+
+├── Data/
+│   ├── 0_RAW/
+│   ├── 1_Processed/
+│   ├── 2_Prompts/
+│   └── 3_Final_predictions/
 │
-├── data/                 # Datasets
-├── models/               # PLM checkpoints
-├── llm/                  # LoRA-adapted LLM models
-├── scripts/              # Training and inference scripts
-├── results/              # Evaluation outputs
-├── figures/              # Paper figures
+├── PLM_Models/
+├── LLM_Models/
 └── README.md
 ```
 
 ---
 
-## Installation
+# Installation
 
-Clone the repository:
-
-```
+```bash
 git clone https://github.com/Anonymous2031/HybridRE.git
 cd HybridRE
-```
-
-Install dependencies:
-
-```
 pip install -r requirements.txt
 ```
 
 ---
 
-## Running HybridRE
+# Key Features
 
-### Train PLM
-
-```
-python train_plm.py
-```
-
-### Run Hybrid Inference
-
-```
-python hybrid_inference.py
-```
-
----
-
+- Confidence-guided hybrid inference  
+- Efficient combination of **PLMs and LLMs**  
+- LoRA-based lightweight LLM adaptation  
+- Improved handling of uncertain predictions  
