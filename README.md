@@ -117,11 +117,4 @@ cd HybridRE
 pip install -r requirements.txt
 ```
 
----
-
-# Key Features
-
-- Confidence-guided hybrid inference  
-- Efficient combination of **PLMs and LLMs**  
-- LoRA-based lightweight LLM adaptation  
-- Improved handling of uncertain predictions  
+--- 
