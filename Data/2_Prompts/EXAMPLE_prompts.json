@@ -1,0 +1,916 @@
+[
+  {
+    "id": "001",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Dr. Eleanor Fischer was recently appointed as the Chief Medical Officer at New York Presbyterian Hospital after a decade of service in pediatric medicine .\nOptions:\nA. Eleanor Fischer is a Chief Medical Officer\nB. Eleanor Fischer has the religion Chief Medical Officer\nC. Eleanor Fischer has the age Chief Medical Officer\nD. Eleanor Fischer died because of Chief Medical Officer\nE. Eleanor Fischer is convicted of Chief Medical Officer\nF. Eleanor Fischer has no known relations to Chief Medical Officer\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "per:title",
+      "B": "per:religion",
+      "C": "per:age",
+      "D": "per:cause_of_death",
+      "E": "per:charges",
+      "F": "no_relation"
+    },
+    "gold_relation": "per:title",
+    "plm_confidence": "0.9990234375",
+    "true_label": "per:title"
+  },
+  {
+    "id": "002",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: InnovateTech Corporation was established by Dr. Harrison Wells and his colleague to pioneer cutting-edge biotechnological advancements .\nOptions:\nA. InnovateTech Corporation was founded by Dr. Harrison\nB. InnovateTech Corporation has the high level member Dr. Harrison\nC. InnovateTech Corporation has shares hold in Dr. Harrison\nD. InnovateTech Corporation has no known relations to Dr. Harrison\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "org:founded_by",
+      "B": "org:top_members/employees",
+      "C": "org:shareholders",
+      "D": "no_relation"
+    },
+    "gold_relation": "org:founded_by",
+    "plm_confidence": "0.9951171875",
+    "true_label": "org:founded_by"
+  },
+  {
+    "id": "003",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Emily Reynolds and Daniel Reynolds celebrated their 20th wedding anniversary at a grand ceremony in Hawaii .\nOptions:\nA. Emily Reynolds is the identity/pronoun of Daniel Reynolds\nB. Emily Reynolds is the parent of Daniel Reynolds\nC. Emily Reynolds is the spouse of Daniel Reynolds\nD. Emily Reynolds is the siblings of Daniel Reynolds\nE. Emily Reynolds is the other family member of Daniel Reynolds\nF. Emily Reynolds has the parent Daniel Reynolds\nG. Emily Reynolds has no known relations to Daniel Reynolds\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "per:identity",
+      "B": "per:children",
+      "C": "per:spouse",
+      "D": "per:siblings",
+      "E": "per:other_family",
+      "F": "per:parents",
+      "G": "no_relation"
+    },
+    "gold_relation": "per:spouse",
+    "plm_confidence": "0.99755859375",
+    "true_label": "per:spouse"
+  },
+  {
+    "id": "004",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: After a successful career spanning two decades , Michael Anderson was promoted to the position of Chief Technology Officer at Cyberdyne Industries .\nOptions:\nA. Michael Anderson is the employee of Cyberdyne Industries\nB. Michael Anderson studied in Cyberdyne Industries\nC. Michael Anderson has no known relations to Cyberdyne Industries\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "per:employee_of",
+      "B": "per:schools_attended",
+      "C": "no_relation"
+    },
+    "gold_relation": "per:employee_of",
+    "plm_confidence": "1.0",
+    "true_label": "org:top_members/employees"
+  },
+  {
+    "id": "005",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Born on June 14 1946 , Donald Trump became one of the most controversial figures in modern politics .\nOptions:\nA. Trump became died in the date June 14 1946\nB. Trump became has birthday on June 14 1946\nC. Trump became has the age June 14 1946\nD. Trump became died because of June 14 1946\nE. Trump became has no known relations to June 14 1946\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "per:date_of_death",
+      "B": "per:date_of_birth",
+      "C": "per:age",
+      "D": "per:cause_of_death",
+      "E": "no_relation"
+    },
+    "gold_relation": "per:date_of_birth",
+    "plm_confidence": "0.99267578125",
+    "true_label": "per:date_of_birth"
+  },
+  {
+    "id": "006",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Following a lengthy trial , Jonathan Henderson was convicted of insider trading and sentenced to five years in federal prison .\nOptions:\nA. Jonathan Henderson died because of insider trading\nB. Jonathan Henderson is convicted of insider trading\nC. Jonathan Henderson has no known relations to insider trading\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "per:cause_of_death",
+      "B": "per:charges",
+      "C": "no_relation"
+    },
+    "gold_relation": "per:charges",
+    "plm_confidence": "0.9931640625",
+    "true_label": "per:charges"
+  },
+  {
+    "id": "007",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: The official website of GlobalTech Solutions is www.globaltech.com , where customers can access support and purchase products .\nOptions:\nA. GlobalTech Solutions has the website www.globaltech.com\nB. GlobalTech Solutions has no known relations to www.globaltech.com\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "org:website",
+      "B": "no_relation"
+    },
+    "gold_relation": "org:website",
+    "plm_confidence": "0.998046875",
+    "true_label": "org:website"
+  },
+  {
+    "id": "008",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Throughout his acting career , Hugh Jackman has lived in both Australia and the United States for extended periods .\nOptions:\nA. Hugh Jackman lives in the country both Australia and the United\nB. Hugh Jackman has the nationality both Australia and the United\nC. Hugh Jackman is the employee of both Australia and the United\nD. Hugh Jackman was born in the country both Australia and the United\nE. Hugh Jackman died in the country both Australia and the United\nF. Hugh Jackman lives in the city both Australia and the United\nG. Hugh Jackman died in the city both Australia and the United\nH. Hugh Jackman has no known relations to both Australia and the United\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "per:countries_of_residence",
+      "B": "per:origin",
+      "C": "per:employee_of",
+      "D": "per:country_of_birth",
+      "E": "per:country_of_death",
+      "F": "per:cities_of_residence",
+      "G": "per:city_of_death",
+      "H": "no_relation"
+    },
+    "gold_relation": "per:countries_of_residence",
+    "plm_confidence": "0.96923828125",
+    "true_label": "per:countries_of_residence"
+  },
+  {
+    "id": "009",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: TechInnovators Inc. employs more than 50,000 individuals worldwide in fields ranging from artificial intelligence to renewable energy .\nOptions:\nA. TechInnovators Inc. has the number of employees 50,000\nB. TechInnovators Inc. has the website 50,000\nC. TechInnovators Inc. has no known relations to 50,000\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "org:number_of_employees/members",
+      "B": "org:website",
+      "C": "no_relation"
+    },
+    "gold_relation": "org:number_of_employees/members",
+    "plm_confidence": "0.982421875",
+    "true_label": "org:number_of_employees/members"
+  },
+  {
+    "id": "010",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Leonardo da Vinci was born in Vinci , Italy during the Renaissance period and became one of the most influential figures in art and science .\nOptions:\nA. Leonardo da Vinci is the employee of Vinci\nB. Leonardo da Vinci died in the city Vinci\nC. Leonardo da Vinci lives in the city Vinci\nD. Leonardo da Vinci was born in the city Vinci\nE. Leonardo da Vinci has the nationality Vinci\nF. Leonardo da Vinci lives in the state or province Vinci\nG. Leonardo da Vinci lives in the country Vinci\nH. Leonardo da Vinci has no known relations to Vinci\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "per:employee_of",
+      "B": "per:city_of_death",
+      "C": "per:cities_of_residence",
+      "D": "per:city_of_birth",
+      "E": "per:origin",
+      "F": "per:stateorprovinces_of_residence",
+      "G": "per:countries_of_residence",
+      "H": "no_relation"
+    },
+    "gold_relation": "per:city_of_birth",
+    "plm_confidence": "0.99609375",
+    "true_label": "per:city_of_birth"
+  },
+  {
+    "id": "011",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Although ABC Corporation worked closely with XYZ Enterprises for years , they were never formally affiliated as parent or subsidiary companies .\nOptions:\nA. ABC Corporation is also known as XYZ Enterprises\nB. ABC Corporation has the member XYZ Enterprises\nC. ABC Corporation is the member of XYZ Enterprises\nD. ABC Corporation has shares hold in XYZ Enterprises\nE. ABC Corporation has no known relations to XYZ Enterprises\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "org:alternate_names",
+      "B": "org:members",
+      "C": "org:member_of",
+      "D": "org:shareholders",
+      "E": "no_relation"
+    },
+    "gold_relation": "no_relation",
+    "plm_confidence": "0.98583984375",
+    "true_label": "no_relation"
+  },
+  {
+    "id": "012",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Despite his deep admiration for Einstein , Dr. James McGill never met him in person but often cited his work in lectures .\nOptions:\nA. Dr. James is the identity/pronoun of Einstein\nB. Dr. James is the parent of Einstein\nC. Dr. James is the spouse of Einstein\nD. Dr. James is the siblings of Einstein\nE. Dr. James is the other family member of Einstein\nF. Dr. James has the parent Einstein\nG. Dr. James has no known relations to Einstein\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "per:identity",
+      "B": "per:children",
+      "C": "per:spouse",
+      "D": "per:siblings",
+      "E": "per:other_family",
+      "F": "per:parents",
+      "G": "no_relation"
+    },
+    "gold_relation": "no_relation",
+    "plm_confidence": "1.0",
+    "true_label": "no_relation"
+  },
+  {
+    "id": "013",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Dr. Jonathan Reeves was recently appointed as the Chief Data Scientist at NeuralTech , where he will lead the AI research division .\nOptions:\nA. Jonathan Reeves is a the Chief Data Scientist\nB. Jonathan Reeves has the religion the Chief Data Scientist\nC. Jonathan Reeves has the age the Chief Data Scientist\nD. Jonathan Reeves died because of the Chief Data Scientist\nE. Jonathan Reeves is convicted of the Chief Data Scientist\nF. Jonathan Reeves has no known relations to the Chief Data Scientist\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "per:title",
+      "B": "per:religion",
+      "C": "per:age",
+      "D": "per:cause_of_death",
+      "E": "per:charges",
+      "F": "no_relation"
+    },
+    "gold_relation": "per:title",
+    "plm_confidence": "0.99853515625",
+    "true_label": "per:title"
+  },
+  {
+    "id": "014",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Quantum Dynamics was established in 2005 by Dr. Elaine Patterson , a renowned physicist and entrepreneur .\nOptions:\nA. Quantum Dynamics was founded by Dr. Elaine Patterson\nB. Quantum Dynamics has the high level member Dr. Elaine Patterson\nC. Quantum Dynamics has shares hold in Dr. Elaine Patterson\nD. Quantum Dynamics has no known relations to Dr. Elaine Patterson\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "org:founded_by",
+      "B": "org:top_members/employees",
+      "C": "org:shareholders",
+      "D": "no_relation"
+    },
+    "gold_relation": "org:founded_by",
+    "plm_confidence": "0.99609375",
+    "true_label": "org:founded_by"
+  },
+  {
+    "id": "015",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: After graduating from Oxford University , Michael Harrison lived in both Canada and Germany due to his work in international law .\nOptions:\nA. Michael Harrison lives in the country both Canada and Germany\nB. Michael Harrison has the nationality both Canada and Germany\nC. Michael Harrison is the employee of both Canada and Germany\nD. Michael Harrison was born in the country both Canada and Germany\nE. Michael Harrison died in the country both Canada and Germany\nF. Michael Harrison lives in the city both Canada and Germany\nG. Michael Harrison died in the city both Canada and Germany\nH. Michael Harrison has no known relations to both Canada and Germany\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "per:countries_of_residence",
+      "B": "per:origin",
+      "C": "per:employee_of",
+      "D": "per:country_of_birth",
+      "E": "per:country_of_death",
+      "F": "per:cities_of_residence",
+      "G": "per:city_of_death",
+      "H": "no_relation"
+    },
+    "gold_relation": "per:countries_of_residence",
+    "plm_confidence": "0.9638671875",
+    "true_label": "per:countries_of_residence"
+  },
+  {
+    "id": "016",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: With a staff of over 20,000 employees , Skyline Technologies remains one of the largest IT firms in North America .\nOptions:\nA. Skyline Technologies has the number of employees over 20,000\nB. Skyline Technologies has the website over 20,000\nC. Skyline Technologies has no known relations to over 20,000\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "org:number_of_employees/members",
+      "B": "org:website",
+      "C": "no_relation"
+    },
+    "gold_relation": "org:number_of_employees/members",
+    "plm_confidence": "0.9794921875",
+    "true_label": "org:number_of_employees/members"
+  },
+  {
+    "id": "017",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Renowned author and historian Emily Sanders was born on July 14 1975 in Chicago .\nOptions:\nA. Emily Sanders died in the date July 14 1975\nB. Emily Sanders has birthday on July 14 1975\nC. Emily Sanders has the age July 14 1975\nD. Emily Sanders died because of July 14 1975\nE. Emily Sanders has no known relations to July 14 1975\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "per:date_of_death",
+      "B": "per:date_of_birth",
+      "C": "per:age",
+      "D": "per:cause_of_death",
+      "E": "no_relation"
+    },
+    "gold_relation": "per:date_of_birth",
+    "plm_confidence": "0.9931640625",
+    "true_label": "per:date_of_birth"
+  },
+  {
+    "id": "018",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Former executive Richard Caldwell was charged with tax fraud and embezzlement following a high-profile investigation .\nOptions:\nA. Richard Caldwell died because of tax fraud and embezzlement\nB. Richard Caldwell is convicted of tax fraud and embezzlement\nC. Richard Caldwell has no known relations to tax fraud and embezzlement\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "per:cause_of_death",
+      "B": "per:charges",
+      "C": "no_relation"
+    },
+    "gold_relation": "per:charges",
+    "plm_confidence": "0.9931640625",
+    "true_label": "per:charges"
+  },
+  {
+    "id": "019",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: For nearly two decades , Susan Keller was a leading scientist at BioGen , where she worked on genome sequencing .\nOptions:\nA. Susan Keller is the employee of at\nB. Susan Keller studied in at\nC. Susan Keller has no known relations to at\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "per:employee_of",
+      "B": "per:schools_attended",
+      "C": "no_relation"
+    },
+    "gold_relation": "per:employee_of",
+    "plm_confidence": "0.99951171875",
+    "true_label": "per:employee_of"
+  },
+  {
+    "id": "020",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: The Liberal Policy Institute is well known for its strong association with progressive ideals and humanitarian efforts .\nOptions:\nA. Liberal Policy Institute has political affiliation with progressive\nB. Liberal Policy Institute has no known relations to progressive\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "org:political/religious_affiliation",
+      "B": "no_relation"
+    },
+    "gold_relation": "org:political/religious_affiliation",
+    "plm_confidence": "0.79833984375",
+    "true_label": "org:political/religious_affiliation"
+  },
+  {
+    "id": "021",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Born and raised in Madrid , Carlos Lopez developed a passion for architecture before moving to New York for higher studies .\nOptions:\nA. Carlos Lopez is the employee of in\nB. Carlos Lopez died in the city in\nC. Carlos Lopez lives in the city in\nD. Carlos Lopez was born in the city in\nE. Carlos Lopez has the nationality in\nF. Carlos Lopez lives in the state or province in\nG. Carlos Lopez lives in the country in\nH. Carlos Lopez has no known relations to in\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "per:employee_of",
+      "B": "per:city_of_death",
+      "C": "per:cities_of_residence",
+      "D": "per:city_of_birth",
+      "E": "per:origin",
+      "F": "per:stateorprovinces_of_residence",
+      "G": "per:countries_of_residence",
+      "H": "no_relation"
+    },
+    "gold_relation": "per:city_of_birth",
+    "plm_confidence": "0.98876953125",
+    "true_label": "per:city_of_birth"
+  },
+  {
+    "id": "022",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Despite frequent travel for their respective careers , Emma Stone and Lucas Martinez have remained happily married for over 15 years .\nOptions:\nA. Emma Stone is the identity/pronoun of Lucas Martinez\nB. Emma Stone is the parent of Lucas Martinez\nC. Emma Stone is the spouse of Lucas Martinez\nD. Emma Stone is the siblings of Lucas Martinez\nE. Emma Stone is the other family member of Lucas Martinez\nF. Emma Stone has the parent Lucas Martinez\nG. Emma Stone has no known relations to Lucas Martinez\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "per:identity",
+      "B": "per:children",
+      "C": "per:spouse",
+      "D": "per:siblings",
+      "E": "per:other_family",
+      "F": "per:parents",
+      "G": "no_relation"
+    },
+    "gold_relation": "per:spouse",
+    "plm_confidence": "0.998046875",
+    "true_label": "per:spouse"
+  },
+  {
+    "id": "023",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Even though GreenCore and EcoSolutions collaborate on several sustainability projects , they remain separate entities with distinct leadership structures .\nOptions:\nA. GreenCore is also known as EcoSolutions\nB. GreenCore has the member EcoSolutions\nC. GreenCore is the member of EcoSolutions\nD. GreenCore has shares hold in EcoSolutions\nE. GreenCore has no known relations to EcoSolutions\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "org:alternate_names",
+      "B": "org:members",
+      "C": "org:member_of",
+      "D": "org:shareholders",
+      "E": "no_relation"
+    },
+    "gold_relation": "no_relation",
+    "plm_confidence": "1.0",
+    "true_label": "no_relation"
+  },
+  {
+    "id": "024",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: While working at Quantum Tech , Henry Adams often attended corporate events hosted by SkyNet Industries but never held a formal position there .\nOptions:\nA. Henry Adams is the employee of by SkyNet\nB. Henry Adams studied in by SkyNet\nC. Henry Adams has no known relations to by SkyNet\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "per:employee_of",
+      "B": "per:schools_attended",
+      "C": "no_relation"
+    },
+    "gold_relation": "no_relation",
+    "plm_confidence": "0.99951171875",
+    "true_label": "no_relation"
+  },
+  {
+    "id": "025",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Although Sarah Wright and Michael Wright share a last name and have been seen together at numerous events , they are actually siblings and not a married couple .\nOptions:\nA. Sarah Wright is the identity/pronoun of Michael Wright\nB. Sarah Wright is the parent of Michael Wright\nC. Sarah Wright is the spouse of Michael Wright\nD. Sarah Wright is the siblings of Michael Wright\nE. Sarah Wright is the other family member of Michael Wright\nF. Sarah Wright has the parent Michael Wright\nG. Sarah Wright has no known relations to Michael Wright\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "per:identity",
+      "B": "per:children",
+      "C": "per:spouse",
+      "D": "per:siblings",
+      "E": "per:other_family",
+      "F": "per:parents",
+      "G": "no_relation"
+    },
+    "gold_relation": "per:siblings",
+    "plm_confidence": "0.67724609375",
+    "true_label": "no_relation"
+  },
+  {
+    "id": "026",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Despite widespread rumors , Amazon and Tesla have never been in a merger or acquisition deal but only worked on a joint project once .\nOptions:\nA. Amazon is also known as Tesla\nB. Amazon has the member Tesla\nC. Amazon is the member of Tesla\nD. Amazon has shares hold in Tesla\nE. Amazon has no known relations to Tesla\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "org:alternate_names",
+      "B": "org:members",
+      "C": "org:member_of",
+      "D": "org:shareholders",
+      "E": "no_relation"
+    },
+    "gold_relation": "no_relation",
+    "plm_confidence": "1.0",
+    "true_label": "no_relation"
+  },
+  {
+    "id": "027",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Jonathan Hughes was once a respected executive at GlobalSoft Technologies , but after he retired in 2015 , he began working independently as a consultant .\nOptions:\nA. Jonathan Hughes is the employee of GlobalSoft Technologies\nB. Jonathan Hughes studied in GlobalSoft Technologies\nC. Jonathan Hughes has no known relations to GlobalSoft Technologies\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "per:employee_of",
+      "B": "per:schools_attended",
+      "C": "no_relation"
+    },
+    "gold_relation": "per:employee_of",
+    "plm_confidence": "1.0",
+    "true_label": "per:employee_of"
+  },
+  {
+    "id": "028",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: While often mistaken for a married couple , Daniel Miller and Sophia Miller are actually siblings who run a business together .\nOptions:\nA. Daniel Miller is the identity/pronoun of Sophia Miller\nB. Daniel Miller is the parent of Sophia Miller\nC. Daniel Miller is the spouse of Sophia Miller\nD. Daniel Miller is the siblings of Sophia Miller\nE. Daniel Miller is the other family member of Sophia Miller\nF. Daniel Miller has the parent Sophia Miller\nG. Daniel Miller has no known relations to Sophia Miller\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "per:identity",
+      "B": "per:children",
+      "C": "per:spouse",
+      "D": "per:siblings",
+      "E": "per:other_family",
+      "F": "per:parents",
+      "G": "no_relation"
+    },
+    "gold_relation": "per:siblings",
+    "plm_confidence": "0.9873046875",
+    "true_label": "no_relation"
+  },
+  {
+    "id": "029",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Despite working closely on numerous projects , TechCorp and InnovateX are not affiliated as subsidiaries or parent companies .\nOptions:\nA. TechCorp is also known as InnovateX\nB. TechCorp has the member InnovateX\nC. TechCorp is the member of InnovateX\nD. TechCorp has shares hold in InnovateX\nE. TechCorp has no known relations to InnovateX\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "org:alternate_names",
+      "B": "org:members",
+      "C": "org:member_of",
+      "D": "org:shareholders",
+      "E": "no_relation"
+    },
+    "gold_relation": "no_relation",
+    "plm_confidence": "0.9794921875",
+    "true_label": "no_relation"
+  },
+  {
+    "id": "030",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Although Emma Johnson had a corner office at NeuralTech , she was not an official employee but a long-term consultant .\nOptions:\nA. Emma Johnson is the employee of NeuralTech\nB. Emma Johnson studied in NeuralTech\nC. Emma Johnson has no known relations to NeuralTech\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "per:employee_of",
+      "B": "per:schools_attended",
+      "C": "no_relation"
+    },
+    "gold_relation": "per:employee_of",
+    "plm_confidence": "0.93359375",
+    "true_label": "no_relation"
+  },
+  {
+    "id": "031",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: While popularly credited as the founder of BioGen , Dr. Henry Clark was actually only an early investor and not the company's official founder .\nOptions:\nA. of was founded by Dr. Henry\nB. of has the high level member Dr. Henry\nC. of has shares hold in Dr. Henry\nD. of has no known relations to Dr. Henry\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "org:founded_by",
+      "B": "org:top_members/employees",
+      "C": "org:shareholders",
+      "D": "no_relation"
+    },
+    "gold_relation": "org:founded_by",
+    "plm_confidence": "0.9912109375",
+    "true_label": "no_relation"
+  },
+  {
+    "id": "032",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Though accused of fraud in several media reports , Laura Peterson was never officially charged due to lack of evidence .\nOptions:\nA. Laura Peterson died because of fraud\nB. Laura Peterson is convicted of fraud\nC. Laura Peterson has no known relations to fraud\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "per:cause_of_death",
+      "B": "per:charges",
+      "C": "no_relation"
+    },
+    "gold_relation": "per:charges",
+    "plm_confidence": "0.990234375",
+    "true_label": "no_relation"
+  },
+  {
+    "id": "033",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Although frequently seen together at various events , Michael Stewart and Olivia Stewart are business partners and not a married couple .\nOptions:\nA. Michael Stewart is the identity/pronoun of Olivia Stewart\nB. Michael Stewart is the parent of Olivia Stewart\nC. Michael Stewart is the spouse of Olivia Stewart\nD. Michael Stewart is the siblings of Olivia Stewart\nE. Michael Stewart is the other family member of Olivia Stewart\nF. Michael Stewart has the parent Olivia Stewart\nG. Michael Stewart has no known relations to Olivia Stewart\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "per:identity",
+      "B": "per:children",
+      "C": "per:spouse",
+      "D": "per:siblings",
+      "E": "per:other_family",
+      "F": "per:parents",
+      "G": "no_relation"
+    },
+    "gold_relation": "per:spouse",
+    "plm_confidence": "0.99609375",
+    "true_label": "no_relation"
+  },
+  {
+    "id": "034",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Despite media speculation , SilverWave Industries was never acquired by OmegaTech and remains a completely independent organization .\nOptions:\nA. SilverWave Industries is also known as OmegaTech\nB. SilverWave Industries has the member OmegaTech\nC. SilverWave Industries is the member of OmegaTech\nD. SilverWave Industries has shares hold in OmegaTech\nE. SilverWave Industries has no known relations to OmegaTech\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "org:alternate_names",
+      "B": "org:members",
+      "C": "org:member_of",
+      "D": "org:shareholders",
+      "E": "no_relation"
+    },
+    "gold_relation": "no_relation",
+    "plm_confidence": "0.80224609375",
+    "true_label": "no_relation"
+  },
+  {
+    "id": "035",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Despite spending years working on projects for EcoTech , Daniel Reynolds was never an official employee but a freelance advisor .\nOptions:\nA. Daniel Reynolds is the employee of EcoTech\nB. Daniel Reynolds studied in EcoTech\nC. Daniel Reynolds has no known relations to EcoTech\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "per:employee_of",
+      "B": "per:schools_attended",
+      "C": "no_relation"
+    },
+    "gold_relation": "per:employee_of",
+    "plm_confidence": "0.998046875",
+    "true_label": "no_relation"
+  },
+  {
+    "id": "036",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: While James Foster was investigated for embezzlement , he was never officially charged due to insufficient evidence .\nOptions:\nA. James Foster died because of embezzlement\nB. James Foster is convicted of embezzlement\nC. James Foster has no known relations to embezzlement\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "per:cause_of_death",
+      "B": "per:charges",
+      "C": "no_relation"
+    },
+    "gold_relation": "per:charges",
+    "plm_confidence": "0.990234375",
+    "true_label": "per:charges"
+  },
+  {
+    "id": "037",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Even though GreenSky Investments and Horizon Capital often collaborate on financial projects , they remain separate entities with no ownership ties .\nOptions:\nA. GreenSky Investments is also known as Horizon Capital\nB. GreenSky Investments has the member Horizon Capital\nC. GreenSky Investments is the member of Horizon Capital\nD. GreenSky Investments has shares hold in Horizon Capital\nE. GreenSky Investments has no known relations to Horizon Capital\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "org:alternate_names",
+      "B": "org:members",
+      "C": "org:member_of",
+      "D": "org:shareholders",
+      "E": "no_relation"
+    },
+    "gold_relation": "no_relation",
+    "plm_confidence": "1.0",
+    "true_label": "no_relation"
+  },
+  {
+    "id": "038",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Born and raised in San Francisco , Ava Collins later moved to New York for her career in finance .\nOptions:\nA. Ava Collins is the employee of San Francisco\nB. Ava Collins died in the city San Francisco\nC. Ava Collins lives in the city San Francisco\nD. Ava Collins was born in the city San Francisco\nE. Ava Collins has the nationality San Francisco\nF. Ava Collins lives in the state or province San Francisco\nG. Ava Collins lives in the country San Francisco\nH. Ava Collins has no known relations to San Francisco\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "per:employee_of",
+      "B": "per:city_of_death",
+      "C": "per:cities_of_residence",
+      "D": "per:city_of_birth",
+      "E": "per:origin",
+      "F": "per:stateorprovinces_of_residence",
+      "G": "per:countries_of_residence",
+      "H": "no_relation"
+    },
+    "gold_relation": "per:city_of_birth",
+    "plm_confidence": "0.99365234375",
+    "true_label": "per:city_of_birth"
+  },
+  {
+    "id": "039",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: The official website for Visionary Solutions can be found at www.visionarysolutions.com , where visitors can explore the company's services .\nOptions:\nA. Visionary Solutions has the website www.visionarysolutions.com\nB. Visionary Solutions has no known relations to www.visionarysolutions.com\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "org:website",
+      "B": "no_relation"
+    },
+    "gold_relation": "org:website",
+    "plm_confidence": "0.998046875",
+    "true_label": "org:website"
+  },
+  {
+    "id": "040",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are an LLM trained to infer relationships between entities from context."
+      },
+      {
+        "role": "user",
+        "content": "Determine which option can be inferred from the given sentence.\nSentence: Dr. Helen Montgomery was awarded the title of Senior Researcher after years of groundbreaking work in biotechnology .\nOptions:\nA. Helen Montgomery is a Senior Researcher\nB. Helen Montgomery has the religion Senior Researcher\nC. Helen Montgomery has the age Senior Researcher\nD. Helen Montgomery died because of Senior Researcher\nE. Helen Montgomery is convicted of Senior Researcher\nF. Helen Montgomery has no known relations to Senior Researcher\nWhich option can be inferred from the given sentence?"
+      }
+    ],
+    "labels": {
+      "A": "per:title",
+      "B": "per:religion",
+      "C": "per:age",
+      "D": "per:cause_of_death",
+      "E": "per:charges",
+      "F": "no_relation"
+    },
+    "gold_relation": "per:title",
+    "plm_confidence": "0.9951171875",
+    "true_label": "per:title"
+  }
+]
